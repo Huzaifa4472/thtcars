@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Tailwind utilities */
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+html {
+  scroll-behavior: smooth;
+}
+.menu-btn {
+  @apply text-white h-10 w-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.2] backdrop:blur-2xl
+   hover:bg-zinc-50/15 active:scale-95;
+}
+.navbar {
+  @apply absolute left-0 mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1
+   ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl;
+}
+.navbar.active {
+  @apply opacity-100 scale-100 blur-0 visible;
+}
+.nav-links {
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors;
+}
+.nav-links.active {
+  @apply text-zinc-900 duration-500;
+}
+.navbar.active-box {
+  @apply absolute top-2 left-2 right-2 h-9 bg-zinc-50 rounded-lg -z-10  duration-500;
+}
