@@ -1,16 +1,14 @@
-// import React, { useRef, useState } from "react";
 import Home from "./Home";
 import { GrMenu } from "react-icons/gr";
 import { MdOutlineClose } from "react-icons/md";
 import NavItem from "./NavItem";
 import { useState } from "react";
-// import NavItem from "./NavItem";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <>
-      <section className=" md:!flex hidden">
+      <section className=" md:!flex hidden z-50 absolute top-0 w-full">
         <div className=" w-1/2 ml-auto py-3 px-5 text-white">
           <div className="flex justify-between mb-5 font-light text-sm">
             <div className="flex items-center gap-2">
@@ -32,14 +30,23 @@ const Header = () => {
           </div>
         </div>
       </section>
-      <header className="fixed top-0 left-0 w-full h-40 flex items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900">
-        <div className="max-w-screen-2xl w-full mx-auto px-4  flex justify-between items-center md:px-6 md:grid md:grid-cols-[1fr,3fr,1fr]">
-          <a href="/" className="logo">
-            <img src="/logo.png" alt="logo" width={120} height={120} />
+      <header className="absolute top-16 w-full flex items-center z-40 ">
+        <div className=" w-[100%] flex justify-between items-center ">
+          <a href="/" className="logo pt-4">
+            <img src="/logo.png" alt="logo" width={150} height={150} />
           </a>
-          <div className="relative md:justify-self-center">
+          <div
+            className="flex items-center  md:justify-self-center bg-curved-bg bg-white w-[100%] border  border-red-600"
+            style={{
+              "--tw-curvature": "40px",
+              maskImage:
+                "radial-gradient(var(--tw-curvature) 60% at left, transparent calc(100% - 1px), black)",
+              WebkitMaskImage:
+                "radial-gradient(var(--tw-curvature) 60% at left, transparent calc(100% - 1px), black)",
+            }}
+          >
             <button
-              className=" menu-btn md:hidden"
+              className=" menu-btn md:hidden "
               onClick={() => {
                 setNavOpen((prev) => !prev);
               }}
@@ -47,44 +54,21 @@ const Header = () => {
               {navOpen ? <MdOutlineClose /> : <GrMenu />}
             </button>
             <NavItem navOpen={navOpen} />
+            <a
+              href="#login"
+              className="btn btn-secondary max-md:hidden md:justify-self-end flex items-center gap-2 pr-4"
+            >
+              Login
+              <div className="bg-[#F47013] p-3 rounded-full">
+                <img src="/login.png" width={30} height={20} />
+              </div>
+            </a>
           </div>
-          <a
-            href="#login"
-            className="btn btn-secondary max-md:hidden md:justify-self-end"
-          >
-            Login
-            <img src="/login.png" width={20} height={20} />
-          </a>
         </div>
-
-        <Home />
       </header>
+      <Home />
     </>
   );
 };
 
 export default Header;
-
-{
-  /* <div>
-  
-  <div className=" md:hidden flex flex-col justify-center gap-1">
-          <div className="font-bold text-xl italic border-b-2 border-[#F47013]">
-            T<span className="text-[#F47013]">H</span>T Cars
-          </div>
-          <div className="text-xs ">Drive With Safety</div>
-        </div>
-  
-  <div
-    className="h-24 bg-white w-full bg-curved-bg hidden md:!flex justify-end pr-5  "
-    style={{
-      "--tw-curvature": "40px",
-      maskImage:
-        "radial-gradient(var(--tw-curvature) 60% at left, transparent calc(100% - 1px), black)",
-      WebkitMaskImage:
-        "radial-gradient(var(--tw-curvature) 60% at left, transparent calc(100% - 1px), black)",
-    }}
-  >
-  </div>
-</div>; */
-}

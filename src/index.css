@@ -20,18 +20,18 @@ html {
    hover:bg-zinc-50/15 active:scale-95;
 }
 .navbar {
-  @apply absolute left-0 mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1
-   ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl;
+  @apply absolute flex justify-end h-20 w-full rounded-2xl 
+   scale-90 isolate blur-sm opacity-0 invisible md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl;
 }
 .navbar.active {
   @apply opacity-100 scale-100 blur-0 visible;
 }
 .nav-links {
-  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors;
+  @apply grid items-center px-4 h-20 text-[15px] font-medium tracking-wide text-black hover:text-[#F47013] transition-colors;
 }
 .nav-links.active {
-  @apply text-zinc-900 duration-500;
+  @apply text-[#F47013] border-b-2 h-20 border-[#F47013] duration-500;
 }
 .navbar.active-box {
-  @apply absolute top-2 left-2 right-2 h-9 bg-zinc-50 rounded-lg -z-10  duration-500;
+  @apply absolute top-2 left-2 right-2 h-20 bg-zinc-50 rounded-lg -z-10  duration-500;
 }
