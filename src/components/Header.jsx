@@ -3,7 +3,12 @@ import { GrMenu } from "react-icons/gr";
 import { MdOutlineClose } from "react-icons/md";
 import NavItem from "./NavItem";
 import { useState } from "react";
-
+import AboutUs from "./AboutUs";
+import FAQ from "./FAQ";
+import Footer from "./Footer";
+import { LuMail } from "react-icons/lu";
+import { FiPhoneCall } from "react-icons/fi";
+import TermsCondition from "./TermsCondition";
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
@@ -12,13 +17,11 @@ const Header = () => {
         <div className=" w-1/2 ml-auto py-3 px-5 text-white">
           <div className="flex justify-between mb-5 font-light text-sm">
             <div className="flex items-center gap-2">
-              {/* <Mail width={18} height={18} /> */}
-
+              <LuMail width={18} height={18} />
               <p>support@THTCars.com</p>
             </div>{" "}
             <div className="flex items-center gap-2">
-              {/* <Phone width={18} height={18} /> */}
-
+              <FiPhoneCall width={18} height={18} />
               <p className=" font-medium ">+1 (833) 330-0996</p>
             </div>
           </div>
@@ -67,6 +70,10 @@ const Header = () => {
         </div>
       </header>
       <Home />
+      <AboutUs />
+      <FAQ />
+      <TermsCondition />
+      <Footer />
     </>
   );
 };
