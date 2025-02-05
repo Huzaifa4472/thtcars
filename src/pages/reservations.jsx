@@ -1,20 +1,59 @@
 import React from "react";
+import NavItem from "../components/NavItem";
 
-const Home = () => {
+const reservations = () => {
   return (
     <div>
-      <div className="absolute  -z-10">
-        <img src="/banner.png" alt="Banner" width={1920} height={1080} />
-      </div>
-      <div className="absolute bottom-0 -z-10 flex w-[100%] items-center justify-center mt-10">
-        <img src="/bannersCars.png" alt="Banner" width={1020} height={780} />
+      <NavItem />
+      <div className="absolute top-56  -z-10">
+        <img
+          src="/graybackground.png"
+          alt="Banner"
+          width={1920}
+          height={1080}
+        />
       </div>
       <div className="w-[100%]  flex flex-col justify-center items-center h-screen">
-        <div className="bg-[#000222] text-xl text-white text-center w-[70%] py-2 rounded-t-md">
-          Searching for a Car Rental
+        <div className="flex justify-center gap-6">
+          <div className="flex flex-col items-center justify-center gap-2">
+            <div className="h-14 w-14  flex justify-center items-center border-2 border-black rounded-md font-bold text-4xl">
+              1
+            </div>
+            <div>Dates</div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <div className="h-14 w-14  flex justify-center items-center border-2 border-black rounded-md font-bold text-4xl">
+              2
+            </div>
+            <div>Vehicles</div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <div className="h-14 w-14  flex justify-center items-center border-2 border-black rounded-md font-bold text-4xl">
+              3
+            </div>
+            <div>Features</div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <div className="h-14 w-14  flex justify-center items-center border-2 border-black rounded-md font-bold text-4xl">
+              4
+            </div>
+            <div>Customer</div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <div className="h-14 w-14  flex justify-center items-center border-2 border-black rounded-md font-bold text-4xl">
+              5
+            </div>
+            <div>Confirm</div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <div className="h-14 w-14  flex justify-center items-center border-2 border-black rounded-md font-bold text-4xl">
+              6
+            </div>
+            <div>Payments</div>
+          </div>
         </div>
-        <form className=" w-[70%] bg-[#f471137a] rounded-b-md pb-6 flex flex-col items-center ">
-          <div className="grid grid-cols-3 gap-6 w-[70%] mt-6 text-white text-sm">
+        <form className=" flex flex-col items-center w-[70%]">
+          <div className="grid grid-cols-3 gap-6 w-[100%] mt-6 text-white text-sm">
             <div className="mb-3 ">
               <label className="block text-sm  font-medium mb-2 ">
                 Pickup Date
@@ -111,12 +150,12 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="mt-8 w-[100%] flex justify-center align-center">
+          <div className="mt-8 w-[100%] flex justify-end align-end">
             <button
               className="bg-[#000222] w-36  border border-[#000222] text-white font-semiBold py-2 px-4 rounded-md "
               type="button"
             >
-              Search
+              Next Step
             </button>
           </div>
         </form>
@@ -125,4 +164,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default reservations;

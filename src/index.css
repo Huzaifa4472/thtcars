@@ -27,7 +27,7 @@ html {
   @apply opacity-100 scale-100 blur-0 visible;
 }
 .nav-links {
-  @apply grid items-center px-4 h-20 text-[15px] font-medium tracking-wide text-black hover:text-[#F47013] transition-colors;
+  @apply grid items-center px-4 h-20 text-[15px] font-medium tracking-wide  hover:text-[#F47013] transition-colors;
 }
 .nav-links.active {
   @apply text-[#F47013] border-b-2 h-20 border-[#F47013] duration-500;

@@ -35,7 +35,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className=" w-1/3 h-screen relative">
-          <img className="w-full h-auto" src="/track.png" />
+          <img className="w-full h-[90%]" src="/track.png" />
           <img
             src="/AboutUpper.png"
             className="absolute top-0 left-0 w-full h-auto"
