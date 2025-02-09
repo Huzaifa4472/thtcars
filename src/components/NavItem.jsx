@@ -140,8 +140,8 @@ const NavItem = ({ navOpen }) => {
               className="btn btn-secondary max-md:hidden md:justify-self-end flex items-center gap-2 pr-4"
             >
               Login
-              <div className="bg-[#F47013] p-3 rounded-full">
-                <img src="/login.png" width={30} height={20} />
+              <div className="bg-[#F47013] w-10 h-10 flex justify-center items-center rounded-full">
+                <img src="/login.png" width={20} height={20} />
               </div>
             </a>
           </div>
